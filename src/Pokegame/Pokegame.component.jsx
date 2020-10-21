@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pokecard } from '../Pokecard/Pokecard.component';
+import { Pokedex } from '../Pokedex/Pokedex.component';
 import './Pokegame.styles.css';
 
 
@@ -11,17 +11,9 @@ export const Pokegame = (props) => {
     return (
         <div>
             <h1>First hand</h1>
-                <div className = "Pokegame">
-                    {arr1.map((pokemon) => (
-                        <Pokecard key = {pokemon.id} pokemonName={pokemon.name} pokemonId={pokemon.id} pokemonType={pokemon.type} pokemonExp={pokemon.base_experience} />
-                    ))}
-            </div>
+            <Pokedex pokemons = {arr1} className = "Pokegame" />
             <h1>Second hand</h1>
-                <div className = "Pokegame">
-                    {arr2.map((pokemon) => (
-                        <Pokecard key = {pokemon.id} pokemonName={pokemon.name} pokemonId={pokemon.id} pokemonType={pokemon.type} pokemonExp={pokemon.base_experience} />
-                    ))} 
-                </div>
+            <Pokedex pokemons = {arr2} className = "Pokegame" />
         </div>
     );
 }
