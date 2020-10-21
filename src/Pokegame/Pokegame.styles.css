@@ -9,3 +9,9 @@
 .Pokegame-h1 {
   font: 5px;
 }
+
+.Pokegame-body1 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}

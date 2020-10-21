@@ -7,13 +7,45 @@ export const Pokegame = (props) => {
      //let shuffled = props.pokemons;
      let shuffledArr = props.pokemons.sort(() => 0.5 - Math.random());
      let arr1 = shuffledArr.slice(0, 4);
+     let sumExp1 = 0;
+     arr1.map((pokemon) => {
+         return sumExp1 = sumExp1 + pokemon.base_experience;
+     })
+
      let arr2 = shuffledArr.slice(4, 8);
+     let sumExp2 = 0;
+     arr2.map((pokemon) => {
+         return sumExp2 = sumExp2 + pokemon.base_experience;
+     })
+
+     let list = "", list1 = "", title1 = "", title2 = "";
+
+     console.log(sumExp1);
+     console.log(sumExp2);
+
+     if (sumExp1 > sumExp2) {
+         list = <Pokedex pokemons = {arr1} className = "Pokegame" />
+         list1 = <Pokedex pokemons = {arr2} className = "Pokegame" />
+         title1 = <h1>Winner</h1>
+         title2 = <h1>Loser</h1>
+     }
+     else if (sumExp1 < sumExp2){
+          list = <Pokedex pokemons = {arr2} className = "Pokegame" />
+          list1 = <Pokedex pokemons = {arr1} className = "Pokegame" />
+          title1 = <h1>Loser</h1>
+          title2 = <h1>Winner</h1>
+     } 
+     
+
     return (
-        <div>
-            <h1>First hand</h1>
-            <Pokedex pokemons = {arr1} className = "Pokegame" />
-            <h1>Second hand</h1>
-            <Pokedex pokemons = {arr2} className = "Pokegame" />
+        
+        <div >
+        {title1}
+        <p>{`Total exp : ${sumExp1}`}</p>
+        {list}
+            {title2}
+            <p>{`Total exp : ${sumExp2}`}</p>
+        {list1}
         </div>
     );
 }
