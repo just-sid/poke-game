@@ -6,6 +6,8 @@ import './Pokedex.styles.css';
 
 
 export const Pokedex = (props) => {
+    let shuffled = props.pokemons;
+    console.log(shuffled);
     return (
         <div className = "Pokedex" >
         {props.pokemons.map((pokemon) => (
