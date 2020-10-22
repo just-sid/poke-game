@@ -24,14 +24,14 @@ export const Pokegame = (props) => {
      console.log(sumExp2);
 
      if (sumExp1 > sumExp2) {
-         list = <Pokedex pokemons = {arr1} className = "Pokegame" />
-         list1 = <Pokedex pokemons = {arr2} className = "Pokegame" />
+         list = <Pokedex pokemons = {arr1} />
+         list1 = <Pokedex pokemons = {arr2} />
          title1 = <div className = "Pokegame-winner">Winning hand</div>
          title2 = <div className = "Pokegame-loser">Losing Hand</div>
      }
      else if (sumExp1 < sumExp2){
-          list = <Pokedex pokemons = {arr2} className = "Pokegame" />
-          list1 = <Pokedex pokemons = {arr1} className = "Pokegame" />
+          list = <Pokedex pokemons = {arr2} />
+          list1 = <Pokedex pokemons = {arr1} />
           title1 = <div className = "Pokegame-loser">Losing Hand</div>
           title2 = <div className = "Pokegame-winner">Winning Hand</div>
      } 
@@ -41,10 +41,10 @@ export const Pokegame = (props) => {
         
         <div>
         {title1}
-        <p>{`Total exp : ${sumExp1}`}</p>
+        <div className = "Pokegame-exp">{`Total exp : ${sumExp1}`}</div>
         {list}
             {title2}
-            <p >{`Total exp : ${sumExp2}`}</p>
+            <div className = "Pokegame-exp">{`Total exp : ${sumExp2}`}</div>
         {list1}
         </div>
     );

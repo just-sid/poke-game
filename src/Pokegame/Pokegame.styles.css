@@ -1,9 +1,26 @@
-/* .Pokegame {
+.Pokegame {
   width: 85vw;
+  height: 100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+}
+
+.Pokecard-game {
+  width: 250px;
+  height: 300px;
+  padding: 15px;
+  margin: 1rem;
+  box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
+  background-color: white;
+  border-radius: 3px;
+}
+
+/* .Pokegame {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 } */
 
 .Pokegame-body1 {
@@ -22,4 +39,9 @@
   color: #e91e63;
   font-weight: bold;
   font-size: 23px;
+}
+
+.Pokegame-exp {
+  font-weight: bold;
+  margin-top: 0.5rem;
 }
